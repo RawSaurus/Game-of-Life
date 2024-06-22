@@ -2,6 +2,7 @@ public class Coordinates {
 
     private int X;
     private int Y;
+    private boolean value;
 
     Coordinates(){
 
@@ -19,6 +20,15 @@ public class Coordinates {
     public int getY(){
         return this.Y;
     }
+
+    public boolean getValue(){
+        return this.value;
+    }
+
+    public void setValue(boolean value){
+        this.value = value;
+    }
+
 
     @Override
     public String toString(){

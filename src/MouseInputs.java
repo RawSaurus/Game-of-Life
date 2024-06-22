@@ -27,7 +27,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
         System.out.println("--------------------------------------");
         int indexX = e.getX()/(panel.getWidth()/panel.width);
         int indexY = e.getY()/(panel.getHeight()/panel.height);
-        System.out.println(panel.activeBoxes);
+        System.out.println(panel.currentRound);
 
 //        panel.round[x][y] = true;
 //        panel.fillOrDelete(x,y);
@@ -44,7 +44,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 //                coord = MouseInfo.getPointerInfo().getLocation();
 //                Color col = robot.getPixelColor((int)coord.getX(), (int)coord.getY());
 //                color = robot.getPixelColor(x +12,y + 31 +12);
-////                color = robot.getPixelColor(panel.activeBoxes.get(1).getX() +24,panel.activeBoxes.get(1).getY() + 43);
+////                color = robot.getPixelColor(panel.round.get(1).getX() +24,panel.round.get(1).getY() + 43);
 //                panel.fillOrDelete(x,y);
 //                System.out.println("Upper left corner x = " + x + " y = " +y);
 //                System.out.println("Mouse click x = " + coord.getX() + " y = " + coord.getY());
@@ -67,7 +67,7 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
 
         panel.drawBoxes(panel.getGraphics(), e.getX(), e.getY());
-        panel.checkSurroundings(e.getX(), e.getY());
+//        panel.checkSurroundings(e.getX(), e.getY());
     }
 
     @Override
